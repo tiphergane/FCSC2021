@@ -1,9 +1,9 @@
 # [FCSC 2021](https://www.france-cybersecurity-challenge.fr/)
 
 ![](./logo.jpg)
-Cette année encore l'ANSSI nous offrent l'opportunité de nous mesurer sur des challenges divers et variés
+Cette année encore l'ANSSI nous offre l'opportunité de nous mesurer sur des challenges divers et variés
 
-La compétition est ouverte du 23 avril au 03 mai.
+La compétition est ouverte du 23 avril au 03 mai 2021.
 
 Je participe à cette compétition pour la 2nd année consécutive en hors catégorie.
 
