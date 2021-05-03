@@ -81,7 +81,7 @@ MAZELTOV, c'est par ici que nous accèderons au shell.
 ## 0x3 Exploitation
 
 Donc, nous avons compris que nous allons avoir une chaine a entrer dans bofbof,
-qui y un certain moment, devra être égale à la valeur de 0x1122334455667788.
+qui à un certain moment, devra être égale à la valeur de 0x1122334455667788.
 
 Pour ce faire, nous devons connaitre une chose importante, la taille du buffer.
 
