@@ -94,8 +94,13 @@ Que ce passerait-il si nous avions fait un:
 ```bash
 cat index.php
 ```
-La  réponse n'est pas forcément celle attendue, en effet, le serveur va 
-interpréter le code sur certaines parties, et donc le rendre illisible.
+--La  réponse n'est pas forcément celle attendue, en effet, le serveur va 
+interpréter le code sur certaines parties, et donc le rendre illisible.--
+
+Précision de la part de ribt (merci à toi)
+
+>En effet sur ta page tu vois plein de blancs mais ça n'est pas parce que le serveur l'exécute au contraire c'est ton navigateur qui attend du code HTML alors il te montre pas les <?php ... ?>. Tu avais juste à faire clic droit, "voir le code source" et tu aurais vu le PHP (probablement en rouge d'ailleurs).
+>D'ailleurs tu vois bien que le serveur envoie le code puisque le curl avec cat index.php fonctionne
 
 ![online cat](./IMG/4.png)
 
