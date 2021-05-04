@@ -94,8 +94,8 @@ Que ce passerait-il si nous avions fait un:
 ```bash
 cat index.php
 ```
---La  réponse n'est pas forcément celle attendue, en effet, le serveur va 
-interpréter le code sur certaines parties, et donc le rendre illisible.--
+~~La  réponse n'est pas forcément celle attendue, en effet, le serveur va 
+interpréter le code sur certaines parties, et donc le rendre illisible.~~
 
 Précision de la part de ribt (merci à toi)
 
