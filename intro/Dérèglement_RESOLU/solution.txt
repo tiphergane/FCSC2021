@@ -1,0 +1,1 @@
+grep -R -E "FCSC{.*?}" -o output > flag.txt
