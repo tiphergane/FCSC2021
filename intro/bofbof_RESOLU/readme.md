@@ -70,7 +70,7 @@ point | explication
 2 | vérifie si la chaine dans RAX est égale à 0x1122334455667788
 3 | si RAX n'est pas égale à la chaine présenté en 2 alors on jump
 4 | on exécute la partie sym.vuln, interessant, nous l'étudierons
-5 | notre message d'erreur, et comme nous pouvons le constaté, si nous sommes égale à AAAAAAAA on ne l'aura pas.
+5 | notre message d'erreur, et comme nous pouvons le constater, si nous sommes égale à AAAAAAAA on ne l'aura pas.
 
 Et quand nous examinons sym.vuln, nous trouvons le code suivant:
 
